@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /avp
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/jl?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*/*.xml
+  type-aliases-package: com.jl.avp.model
+
+# ¥Ú”°sql
+logging:
+  level:
+    com.jl.avp.dao : debug
